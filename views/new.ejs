@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Packs</title>
+</head>
+<body>
+<h1>Add your favorite Pack animall here</h1>
+
+     	<% for (var x in errors) { %>
+      <h3><%= errors[x].message %></h3>
+     	<% } %>
+
+<form action="/packs" method="post">
+	<label>Name:</label><br>
+	<input type="text" name="name"><br>
+	<label>Habitat:</label><br>
+	<input type="text" name="habitat"><br>
+	<label>food:</label><br>
+	<input type="text" name="food"><br>
+	<label>Group size:</label><br>
+	<input type="text" name="groupsize"><br>
+	<br>
+	<br>
+	<input type="submit" value="Add Pack">
+
+
+</form>
+
+</body>
+</html>

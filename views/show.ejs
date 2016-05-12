@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pack</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+	<h1>This is the <%= one_pack.name %> Pack</h1>
+</body>
+	<p>You see them in the  <%= one_pack.habitat %>.</p>
+	<p>there group is <%= one_pack.groupsize %>.</p>
+	<p>they like to eat <%= one_pack.food %>.</p>
+
+	<a href="/">Go Back</a> | 
+	<a href="/packs/<%= one_pack._id %>/edit">Edit this Pack</a> 
+	<form action="/packs/<%= one_pack._id %>/destroy" method="post">
+		<input id="delete" type="submit" value="Delete this Pack">
+	</form> 
+</body>
+</html>

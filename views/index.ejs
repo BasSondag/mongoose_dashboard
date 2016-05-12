@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Packs</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+	<h1>Welcome her you can see all the packs</h1>
+	<table>
+		
+	
+		<thead>
+			<th>Name:</th>
+			<th>Habitat:</th>
+			<th>Food:</th>
+			<th>Group Size:</th>
+			<th>Actions:</th>
+		</thead>
+		<tbody>
+			<tr>
+			<% for(var x in all_packs){ %>
+				<td><%= all_packs[x].name %></td>
+				<td><%= all_packs[x].habitat %></td>
+				<td><%= all_packs[x].food %></td>
+				<td><%= all_packs[x].groupsize %></td>
+				<td> <a href="/packs/<%= all_packs[x]._id %>">Show this Pack</a> </td>
+			</tr>
+		</tbody>
+			<% } %>
+	</table>
+	<br>
+	<br>
+	<a href="/packs/new">Add a pack</a>
+
+</body>
+</html>

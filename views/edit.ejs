@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Packs</title>
+</head>
+<body>
+<h1>Update <%= one_pack.name %></h1>
+ 	<% if(typeof(errors) != 'undefined' ) { %>
+     	<% for (var x in errors) { %>
+      <h3><%= errors[x].message %></h3>
+     	<% } %>
+ 	<% } %>	
+<form action="/packs/<%= one_pack._id %>" method="post">
+	<label>Name:</label><br>
+	<input type="text" name="name" value="<%= one_pack.name %>"><br>
+	<label>Habitat:</label><br>
+	<input type="text" name="habitat" value="<%= one_pack.habitat %>"><br>
+	<label>food:</label><br>
+	<input type="text" name="food" value="<%= one_pack.food %>"><br>
+	<label>Group size:</label><br>
+	<input type="text" name="groupsize" value="<%= one_pack.groupsize %>"><br>
+	<br>
+	<br>
+	<input type="submit" value="Update Pack">
+
+
+</form>
+
+</body>
+</html>
